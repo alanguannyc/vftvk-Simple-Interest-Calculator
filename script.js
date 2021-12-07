@@ -36,7 +36,7 @@ function updateRate() {
   function init() {
     var html = "";
     var years = document.getElementById("years");
-    for (var i = 1; i <= 9; i++) {
+    for (var i = 1; i <= 10; i++) {
       html = html + `<option value=${i}>${i}</option>`;
     }
 
