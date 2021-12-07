@@ -2,32 +2,42 @@
 <html lang="en">
   <head>
     <script src="script.js"></script>
-    <title>Simple Interest Calculator</title>
+    <title>Web App – Simple Interest Calculator</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <h1>Simple Interest Calculator</h1>
     <div class="maindiv">
-      Amount <input type="number" id="principal" /> <br />
-      Rate
-      <input
-        type="range"
-        id="rate"
-        min="1"
-        max="100"
-        defaultValue="10.25"
-        onchange="updateRate()"
-      />
-      <span id="rate_val">10.25 %</span><br />
-      No. of Years
-      <select id="years">
-        <option value="1">1</option>
-        <!-- fill in the rest of the values-->
-      </select>
-      <br />
-      Interest : <span id="result"></span><br />
+      <div class="grid">
+        <labe>Amount</labe>
+        <div class="inputItem">
+          <input type="number" id="principal" /> <br />
+        </div>
+
+        <label>Rate</label>
+        <div class="inputItem">
+          <input
+            type="range"
+            id="rate"
+            min="1"
+            max="20"
+            defaultValue="10.25"
+            onchange="updateRate()"
+          />
+          <span id="rate_val">10.25 %</span><br />
+        </div>
+
+        <label> No. of Years</label>
+        <div class="inputItem">
+          <select id="years">
+            <option value="1">1</option>
+            <!-- fill in the rest of the values-->
+          </select>
+          <br />
+        </div>
+      </div>
       <button onclick="validateInput()">Compute Interest</button>
-      <span id="result"> </span>
+      <div>Interest : <span id="result"></span><br /></div>
     </div>
   </body>
   <footer>&#169; This Calculator belongs to Alan Guan</footer>

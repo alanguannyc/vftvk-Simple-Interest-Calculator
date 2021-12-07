@@ -6,15 +6,15 @@ function compute() {
   var year = new Date().getFullYear() + parseInt(years);
 
   document.getElementById("result").innerHTML =
-    "If you deposit " +
+    "If you deposit <span class='number'>" +
     principal +
-    ",<br>at an interest rate of " +
+    "</span>,<br>at an interest rate of <span class='number'>" +
     rate +
-    "%<br>You will receive an amount of " +
+    "%</span><br>You will receive an amount of <span class='number'>" +
     amount +
-    ",<br>in the year " +
+    "</span>,<br>in the year <span class='number'>" +
     year +
-    "<br>";
+    "</span><br>";
 }
 function validateInput() {
   var principal = document.getElementById("principal");
@@ -28,6 +28,9 @@ function validateInput() {
 function updateRate() {
   var rateval = document.getElementById("rate").value;
   document.getElementById("rate_val").innerText = rateval + "%";
+  if (rateval == 0) {
+    document.getElementById("rate_val").innerText = "1%";
+  }
 }
 
 (function (window, document, undefined) {
